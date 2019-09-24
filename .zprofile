@@ -28,6 +28,7 @@ alias diff="colordiff"
 # for golang
 export GOPATH=$HOME/go
 export PATH=$HOME/go/bin:$PATH
+export GOENV_DISABLE_GOPATH=1 # go1.13からの運用
 
 # for goenv
 export GOENV_ROOT="$HOME/.goenv"
@@ -87,5 +88,5 @@ function peco-z-search
   fi
 }
 zle -N peco-z-search
-bindkey '^F' peco-z-search
+bindkey '^]' peco-z-search
 
