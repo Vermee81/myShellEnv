@@ -1,43 +1,22 @@
-" プラグインが実際にインストールされるディレクトリ
-let s:dein_dir = expand('~/.cache/dein')
-" dein.vim 本体
-let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+set nocompatible
+filetype plugin indent off
 
-" dein.vim がなければ github から落としてくる
-if &runtimepath !~# '/dein.vim'
-  if !isdirectory(s:dein_repo_dir)
-    execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
-  endif
-  execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim
 endif
 
-execute 'set runtimepath^=' . s:dein_repo_dir
+call neobundle#begin(expand('~/.vim/bundle'))
 
-" 設定開始
-if dein#load_state(s:dein_dir)
-  call dein#begin(s:dein_dir)
+NeoBundleFetch 'Shougo/neobundle.vim'
 
-  " プラグインリストを収めた TOML ファイル
-  " 予め TOML ファイルを用意しておく
-  let g:rc_dir    = expand('~/.vim/rc')
-  let s:toml      = g:rc_dir . '/dein.toml'
-  let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'fatih/vim-go'
 
-  " TOML を読み込み、キャッシュしておく
-  call dein#load_toml(s:toml,      {'lazy': 0})
-  call dein#load_toml(s:lazy_toml, {'lazy': 1})
-
-  " 設定終了
-  call dein#end()
-  call dein#save_state()
-endif
+call neobundle#end()
 
 filetype plugin indent on
-
-" もし、未インストールものものがあったらインストール
-if dein#check_install()
-  call dein#install()
-endif
 
 " **************************************
 " basic settings
@@ -78,6 +57,18 @@ set softtabstop=4
 " *******************************************************
 " vim-go 
 " *******************************************************
+let g:go_bin_path = expand("~/.go/bin")
+
+exe "set runtimepath+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
+set completeopt=menu,preview
+au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_fields = 1
