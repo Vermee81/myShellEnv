@@ -27,3 +27,10 @@ Install zplug and plugins
 git clone https://github.com/zplug/zplug.git .zplug
 zplug install
 ```
+
+Install nodenv and node-build
+
+```
+git clone git://github.com/nodenv/nodenv.git ~/.nodenv
+git clone https://github.com/nodenv/node-build.git ~/.nodenv/plugins/node-build
+```
