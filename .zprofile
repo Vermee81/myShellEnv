@@ -68,6 +68,10 @@ MITMPROXY_SSLKEYLOGFILE="$HOME/.mitmproxy/sslkeylogfile.txt"
 # for nodejs
 export PATH=$PATH:$HOME/.nodebrew/current/bin
 
+# for nodeenv
+export PATH="$HOME/.nodenv/bin:$PATH"
+eval "$(nodenv init -)"
+
 # for .z
 source $HOME/.zsh.d/z.sh
 
