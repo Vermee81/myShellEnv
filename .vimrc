@@ -14,6 +14,7 @@ NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'fatih/vim-go'
+NeoBundle 'AndrewRadev/splitjoin.vim'
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle "ctrlpvim/ctrlp.vim"
 
