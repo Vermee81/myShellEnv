@@ -76,7 +76,7 @@ au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 au FileType go map <C-n> :cnext<CR>
 au FileType go map <C-m> :cprevious<CR>
-au FileType go nnoremap <leader>a :cclose<CR>
+au FileType go nnoremap <Leader>a :cclose<CR>
 
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
