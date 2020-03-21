@@ -11,7 +11,7 @@ Don't forget to install mandatory plugins and libraries.
 
 Install zsh and many other tools.
 
-```brew install zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting colordiff reattach-to-user-namespace tmux```
+```brew install zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting colordiff reattach-to-user-namespace tmux direnv```
 
 Install z.sh
 

@@ -78,6 +78,9 @@ export PATH="$HOME/.tfenv/bin:$PATH"
 # for .z
 source $HOME/.zsh.d/z.sh
 
+# for direnv
+eval "$(direnv hook zsh)"
+
 # for peco
 function peco-z-search
 {
