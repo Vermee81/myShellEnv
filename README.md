@@ -28,9 +28,10 @@ git clone https://github.com/zplug/zplug.git .zplug
 zplug install
 ```
 
-Install nodenv and node-build
+Install nodenv, node-build and tfenv
 
 ```
 git clone git://github.com/nodenv/nodenv.git ~/.nodenv
 git clone https://github.com/nodenv/node-build.git ~/.nodenv/plugins/node-build
+git clone https://github.com/tfutils/tfenv.git ~/.tfenv
 ```
