@@ -6,6 +6,7 @@ This configure refers to the following blog posts.
 
 - [Mac標準のbashからzshに変えた時のメモ](https://qiita.com/akashima/items/bdcde778644086533ade)
 - [zshでzの結果をpecoって爆速でディレクトリ移動する](https://qiita.com/maxmellon/items/23325c22581e9187639e)
+- [Catalinaにzshをインストールする際のメモ](https://qiita.com/yshishido/items/f85902c6039f07d07d48)
 
 Don't forget to install mandatory plugins and libraries.
 
