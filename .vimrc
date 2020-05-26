@@ -2,6 +2,12 @@ set nocompatible
 filetype plugin indent off
 
 if has('vim_starting')
+  " neobundle をインストールしていない場合は自動インストール
+  if !isdirectory(expand("~/.vim/bundle/neobundle.vim/"))
+    echo "install neobundle..."
+    " vim からコマンド呼び出しているだけ neobundle.vim のクローン
+    :call system("git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim")
+  endif
   set runtimepath+=~/.vim/bundle/neobundle.vim
 endif
 

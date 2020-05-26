@@ -25,6 +25,9 @@ bindkey "^N" history-beginning-search-forward-end
 # alias
 alias diff="colordiff"
 
+# for zsh
+export PATH=/usr/local/bin:$PATH
+
 # for golang
 export GOPATH=$HOME/go
 export PATH=$HOME/go/bin:$PATH
