@@ -27,6 +27,7 @@ alias diff="colordiff"
 
 # for zsh
 export PATH=/usr/local/bin:$PATH
+setopt nonomatch # *で補完が実行されないようにする
 
 # for golang
 export GOPATH=$HOME/go
@@ -103,3 +104,5 @@ function peco-z-search
 zle -N peco-z-search
 bindkey '^]' peco-z-search
 
+
+export PATH="$HOME/.poetry/bin:$PATH"
