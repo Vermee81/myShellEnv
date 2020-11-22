@@ -27,6 +27,7 @@ alias diff="colordiff"
 
 # for zsh
 export PATH=/usr/local/bin:$PATH
+setopt nonomatch # *で補完が実行されないようにする
 
 # for golang
 export GOPATH=$HOME/go
