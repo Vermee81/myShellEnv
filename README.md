@@ -38,3 +38,9 @@ git clone git://github.com/nodenv/nodenv.git ~/.nodenv
 git clone https://github.com/nodenv/node-build.git ~/.nodenv/plugins/node-build
 git clone https://github.com/tfutils/tfenv.git ~/.tfenv
 ```
+
+Install poetry
+
+```
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+```

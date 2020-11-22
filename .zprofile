@@ -103,3 +103,5 @@ function peco-z-search
 zle -N peco-z-search
 bindkey '^]' peco-z-search
 
+
+export PATH="$HOME/.poetry/bin:$PATH"
