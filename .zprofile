@@ -106,3 +106,6 @@ bindkey '^]' peco-z-search
 
 
 export PATH="$HOME/.poetry/bin:$PATH"
+
+# for composer
+export PATH="$HOME/.composer/vendor/bin:$PATH"

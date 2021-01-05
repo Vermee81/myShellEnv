@@ -44,3 +44,11 @@ Install poetry
 ```
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
 ```
+
+Install PHP Code Sniffer
+
+```
+brew install composer
+composer global require "squizlabs/php_codesniffer=*"
+```
+
