@@ -109,3 +109,7 @@ export PATH="$HOME/.poetry/bin:$PATH"
 
 # for composer
 export PATH="$HOME/.composer/vendor/bin:$PATH"
+
+# for flutter
+export PATH="$HOME/flutter/bin:$PATH"
+
