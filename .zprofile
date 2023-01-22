@@ -36,7 +36,7 @@ export GOENV_DISABLE_GOPATH=1 # go1.13からの運用
 
 # for python
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 # for pipenv
