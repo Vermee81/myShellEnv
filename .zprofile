@@ -102,8 +102,11 @@ function peco-z-search
 zle -N peco-z-search
 bindkey '^]' peco-z-search
 
+# for poetry
+export PATH="$HOME/.local/bin:$PATH"
+fpath+=~/.zfunc
+autoload -Uz compinit && compinit
 
-export PATH="$HOME/.poetry/bin:$PATH"
 
 # for composer
 export PATH="$HOME/.composer/vendor/bin:$PATH"
