@@ -32,7 +32,7 @@ setopt nonomatch # *で補完が実行されないようにする
 # for golang
 export GOPATH=$HOME/go
 export PATH=$HOME/go/bin:$PATH
-export GOENV_DISABLE_GOPATH=1 # go1.13からの運用
+export GOROOT=/usr/local/go
 
 # for python
 export PYENV_ROOT="$HOME/.pyenv"
