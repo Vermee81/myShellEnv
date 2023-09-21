@@ -42,6 +42,9 @@ eval "$(pyenv init -)"
 # for pipenv
 PIPENV_DEFAULT_PYTHON_VERSION='3.6.6'
 
+# for rye
+source "$HOME/.rye/env"
+
 # for ruby
 export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
@@ -99,8 +102,11 @@ function peco-z-search
 zle -N peco-z-search
 bindkey '^]' peco-z-search
 
+# for poetry
+export PATH="$HOME/.local/bin:$PATH"
+fpath+=~/.zfunc
+autoload -Uz compinit && compinit
 
-export PATH="$HOME/.poetry/bin:$PATH"
 
 # for composer
 export PATH="$HOME/.composer/vendor/bin:$PATH"

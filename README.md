@@ -45,6 +45,12 @@ Install poetry
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
 ```
 
+Install rye
+
+```
+curl -sSf https://rye-up.com/get | bash
+```
+
 Install PHP Code Sniffer
 
 ```
