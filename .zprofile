@@ -42,6 +42,9 @@ eval "$(pyenv init -)"
 # for pipenv
 PIPENV_DEFAULT_PYTHON_VERSION='3.6.6'
 
+# for rye
+source "$HOME/.rye/env"
+
 # for ruby
 export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
