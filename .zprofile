@@ -115,6 +115,6 @@ export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH="$HOME/flutter/bin:$PATH"
 
 # for gcloud SDK
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 
