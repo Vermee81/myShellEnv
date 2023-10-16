@@ -118,3 +118,6 @@ export PATH="$HOME/flutter/bin:$PATH"
 source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
 source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 
+# for zsh-autosuggestions
+source /usr/local/opt/zsh-autosuggestions/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
