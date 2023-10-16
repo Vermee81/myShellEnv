@@ -73,6 +73,7 @@ export PATH=$PATH:$HOME/.nodebrew/current/bin
 # for nodeenv
 export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
+export PATH="$HOME/.nodenv/shims/npm:$PATH"
 
 # for tfenv(Terraform env)
 export PATH="$HOME/.tfenv/bin:$PATH"
