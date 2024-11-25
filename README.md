@@ -10,6 +10,12 @@ This configure refers to the following blog posts.
 
 Don't forget to install mandatory plugins and libraries.
 
+Install and initialize Sheldon to manage zsh plugins.
+```
+brew install sheldon
+sheldon init --shell zsh
+```
+
 Install zsh and many other tools.
 
 ```brew install zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting colordiff reattach-to-user-namespace tmux direnv```
@@ -24,10 +30,6 @@ Install peco
 
 Install zplug and plugins
 
-```
-git clone https://github.com/zplug/zplug.git .zplug
-zplug install
-```
 
 Install pyenv, goenv, nodenv, node-build and tfenv
 

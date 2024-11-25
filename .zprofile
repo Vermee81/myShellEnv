@@ -4,6 +4,8 @@ compinit
 
 # prompt
 PROMPT='%m:%c %n$ '
+# for Sheldon which is a plugin manager for zsh
+eval "$(sheldon source)"
 
 # keybind
 bindkey \^U backward-kill-line
@@ -45,7 +47,6 @@ PIPENV_DEFAULT_PYTHON_VERSION='3.6.6'
 # for rye
 source "$HOME/.rye/env"
 
-# for ruby
 export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
@@ -122,3 +123,4 @@ source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 # for zsh-autosuggestions
 source /usr/local/opt/zsh-autosuggestions/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
