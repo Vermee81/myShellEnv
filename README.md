@@ -20,6 +20,11 @@ Install zsh and many other tools.
 
 ```brew install colordiff tmux peco```
 
+Install Rosetta2 for some libraries
+```
+sudo softwareupdate --install-rosetta --agree-to-license
+```
+
 Install nodebrew
 ```
 curl -L git.io/nodebrew | perl - setup
