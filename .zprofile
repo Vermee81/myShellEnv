@@ -1,11 +1,14 @@
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# for Sheldon which is a plugin manager for zsh
+eval "$(sheldon source)"
+
 # 補完機能
 autoload -U compinit
 compinit
 
 # prompt
 PROMPT='%m:%c %n$ '
-# for Sheldon which is a plugin manager for zsh
-eval "$(sheldon source)"
 
 # keybind
 bindkey \^U backward-kill-line
@@ -28,62 +31,28 @@ bindkey "^N" history-beginning-search-forward-end
 alias diff="colordiff"
 
 # for zsh
-export PATH=/usr/local/bin:$PATH
 setopt nonomatch # *で補完が実行されないようにする
 
 # for golang
 export GOPATH=$HOME/go
 export PATH=$HOME/go/bin:$PATH
-export GOROOT=/usr/local/go
 
 # for python
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-# for pipenv
-PIPENV_DEFAULT_PYTHON_VERSION='3.6.6'
-
 # for rye
 source "$HOME/.rye/env"
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-# for ghq
-export PATH="$HOME/go/bin:$PATH"
-
-# for percol
-function percol-src () {
-    local selected_dir=$(ghq list --full-path | percol --query "$LBUFFER")
-    if [ -n "$selected_dir" ]; then
-        BUFFER="cd ${selected_dir}"
-        zle accept-line
-    fi
-    zle clear-screen
-}
-zle -N percol-src
-bindkey '^S' percol-src
-
-# for mitmproxy
-MITMPROXY_SSLKEYLOGFILE="$HOME/.mitmproxy/sslkeylogfile.txt"
-
 # for nodejs
 export PATH=$PATH:$HOME/.nodebrew/current/bin
-
-# for nodeenv
-export PATH="$HOME/.nodenv/bin:$PATH"
-eval "$(nodenv init -)"
-export PATH="$HOME/.nodenv/shims/npm:$PATH"
 
 # for tfenv(Terraform env)
 export PATH="$HOME/.tfenv/bin:$PATH"
 
 # for .z
 source $HOME/.zsh.d/z.sh
-
-# for direnv
-eval "$(direnv hook zsh)"
 
 # for peco
 function peco-z-search
@@ -104,23 +73,6 @@ function peco-z-search
 zle -N peco-z-search
 bindkey '^]' peco-z-search
 
-# for poetry
-export PATH="$HOME/.local/bin:$PATH"
-fpath+=~/.zfunc
-autoload -Uz compinit && compinit
-
-
-# for composer
-export PATH="$HOME/.composer/vendor/bin:$PATH"
-
 # for flutter
 export PATH="$HOME/flutter/bin:$PATH"
 
-# for gcloud SDK
-source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
-source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
-
-# for zsh-autosuggestions
-source /usr/local/opt/zsh-autosuggestions/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-eval "$(/opt/homebrew/bin/brew shellenv)"
