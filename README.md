@@ -20,6 +20,9 @@ Install zsh and many other tools.
 
 ```brew install colordiff tmux peco```
 
+Install google cloud sdk
+```brew install --cask google-cloud-sdk```
+
 Install Rosetta2 for some libraries
 ```
 sudo softwareupdate --install-rosetta --agree-to-license
