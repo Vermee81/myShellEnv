@@ -37,6 +37,17 @@ setopt nonomatch # *で補完が実行されないようにする
 export GOPATH=$HOME/go
 export PATH=$HOME/go/bin:$PATH
 
+# for python
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# for rye
+source "$HOME/.rye/env"
+
+# for uv
+source $HOME/.local/bin/env
+
 # for nodejs
 export PATH=$PATH:$HOME/.nodebrew/current/bin
 
@@ -66,5 +77,5 @@ bindkey '^]' peco-z-search
 export PATH="$HOME/flutter/bin:$PATH"
 
 # for google cloud
-source '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-source '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+source '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' 
+source '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' 
