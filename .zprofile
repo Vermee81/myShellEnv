@@ -42,9 +42,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-# for rye
-source "$HOME/.rye/env"
-
 # for nodejs
 export PATH=$PATH:$HOME/.nodebrew/current/bin
 
