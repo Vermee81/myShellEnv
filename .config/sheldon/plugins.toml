@@ -14,11 +14,35 @@ shell = "zsh"
 
 [plugins]
 
+[plugins.z]
+github = "rupa/z"
+
+[plugins.zsh-wakatime]
+github = "wbinglee/zsh-wakatime"
+
+[plugins.zsh-notify]
+github = "marzocchi/zsh-notify"
+
+[plugins.zsh-dwim]
+github = "oknowton/zsh-dwim"
+
+[plugins.mysql-plugin]
+github = "voronkovich/mysql.plugin.zsh"
+
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
 
 [plugins.zsh-syntax-highlighting]
 github = "zsh-users/zsh-syntax-highlighting"
+
+[plugins.zsh-url-highlighter]
+github = "ascii-soup/zsh-url-highlighter"
+
+[plugins.zsh-256color]
+github =  "chrissicool/zsh-256color"
+
+[plugins.zsh-colors]
+github =  "Tarrasch/zsh-colors"
 
 [plugins.zsh-completions]
 github = "zsh-users/zsh-completions"
