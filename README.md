@@ -33,16 +33,15 @@ Install nodebrew
 curl -L git.io/nodebrew | perl - setup
 ```
 
-Install pyenv and tfenv
+Install tfenv
 
 ```
-git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 git clone https://github.com/tfutils/tfenv.git ~/.tfenv
 ```
 
-Install rye
+Install uv
 
 ```
-curl -sSf https://rye.astral.sh/get | bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
