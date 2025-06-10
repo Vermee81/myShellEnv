@@ -43,9 +43,6 @@ export PATH=$PATH:$HOME/.nodebrew/current/bin
 # for tfenv(Terraform env)
 export PATH="$HOME/.tfenv/bin:$PATH"
 
-# for .z
-source $HOME/.zsh.d/z.sh
-
 # for peco
 function peco-z-search
 {
